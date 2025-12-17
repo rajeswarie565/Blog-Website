@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Creative Tech Blog</title>
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ================= HEADER & NAVIGATION ================ -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo-area">
+          <div class="logo-mark">MB</div>
+          <div class="logo-text">
+            <h1>My Blog</h1>
+            <p class="tagline">Thoughts on tech, life & learning</p>
+          </div>
+        </div>
+
+        <!-- Search bar (optional feature) -->
+        <form class="search-form" id="searchForm">
+          <input
+            type="search"
+            id="searchInput"
+            placeholder="Search posts..."
+            aria-label="Search blog posts"
+          />
+          <button type="submit">Search</button>
+        </form>
+
+        <!-- Main navigation -->
+        <nav class="main-nav" aria-label="Main navigation">
+          <!-- Using a list as requested -->
+          <ul>
+            <li><button class="nav-link active" data-target="post-1">First Steps</button></li>
+            <li><button class="nav-link" data-target="post-2">Creative Coding</button></li>
+            <li><button class="nav-link" data-target="post-3">Staying Consistent</button></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ================= MAIN CONTENT ================ -->
+    <main class="site-main container">
+      <!-- List of posts (for smaller screens and overview) -->
+      <aside class="post-list" aria-label="Blog post list">
+        <h2 class="section-title">All Posts</h2>
+        <ul id="postList">
+          <!-- Each list item is linked to a post via data attributes -->
+          <li data-post-id="post-1">
+            <h3>My First Step into Web Development</h3>
+            <p class="meta">Published on <time datetime="2025-09-01">1 Sep 2025</time></p>
+          </li>
+          <li data-post-id="post-2">
+            <h3>Finding Creativity in Code</h3>
+            <p class="meta">Published on <time datetime="2025-10-05">5 Oct 2025</time></p>
+          </li>
+          <li data-post-id="post-3">
+            <h3>How I Stay Consistent While Learning</h3>
+            <p class="meta">Published on <time datetime="2025-11-10">10 Nov 2025</time></p>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Active post area -->
+      <section class="post-area" aria-label="Active blog post">
+        <!-- ============ BLOG POST 1 ============ -->
+        <article class="blog-post active" id="post-1" data-tags="html css javascript beginner">
+          <header>
+            <h2>My First Step into Web Development</h2>
+            <p class="meta">
+              Published on
+              <time datetime="2025-09-01">1 September 2025</time>
+              · <span class="post-tags">Tags: HTML, CSS, JavaScript</span>
+            </p>
+          </header>
+
+          <!-- Placeholder image -->
+          <figure class="post-image">
+            <img
+              src="https://via.placeholder.com/900x400/374151/ffffff?text=Getting+Started+with+the+Web"
+              alt="Illustration representing getting started with web development"
+            />
+          </figure>
+
+          <div class="post-content">
+            <p>
+              Every journey starts with a single step, and this is mine. Building this blog with
+              plain HTML, CSS, and JavaScript is my way of understanding how the web actually
+              works under the hood.
+            </p>
+            <p>
+              Instead of relying on heavy frameworks, I wanted to write everything by hand: the
+              structure, the design, and the interactivity. It’s slower at first, but it teaches
+              me how each part of a website fits together.
+            </p>
+            <p>
+              In this post, I’m reminding myself that it’s completely fine to start small. A
+              simple page with a clean layout and a clear purpose is already a win. The important
+              thing is to keep building, keep breaking things, and keep learning.
+            </p>
+          </div>
+
+          <!-- Comment section for Post 1 -->
+          <section class="comments" aria-label="Comments for My First Step into Web Development">
+            <h3>Comments</h3>
+
+            <form class="comment-form" data-post-id="post-1">
+              <div class="form-row">
+                <label for="comment-name-1">Name</label>
+                <input
+                  type="text"
+                  id="comment-name-1"
+                  name="name"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+              <div class="form-row">
+                <label for="comment-message-1">Comment</label>
+                <textarea
+                  id="comment-message-1"
+                  name="message"
+                  rows="3"
+                  placeholder="Share your thoughts..."
+                  required
+                ></textarea>
+              </div>
+              <button type="submit">Post Comment</button>
+            </form>
+
+            <ul class="comment-list" id="comments-post-1">
+              <!-- Comments for post 1 will appear here -->
+            </ul>
+          </section>
+        </article>
+
+        <!-- ============ BLOG POST 2 ============ -->
+        <article class="blog-post" id="post-2" data-tags="creative coding design javascript">
+          <header>
+            <h2>Finding Creativity in Code</h2>
+            <p class="meta">
+              Published on
+              <time datetime="2025-10-05">5 October 2025</time>
+              · <span class="post-tags">Tags: Design, JavaScript</span>
+            </p>
+          </header>
+
+          <figure class="post-image">
+            <img
+              src="https://via.placeholder.com/900x400/1f2937/ffffff?text=Creative+Coding"
+              alt="Abstract shapes representing creativity in programming"
+            />
+          </figure>
+
+          <div class="post-content">
+            <p>
+              Many people think coding is only about logic, rules, and strict syntax. But the more
+              I code, the more I realize how creative it can be. Choosing colors, typography, and
+              layouts is just as important as making sure the JavaScript runs without errors.
+            </p>
+            <p>
+              Even something as simple as a comment form can be “designed.” How does it feel to
+              use? Is the spacing comfortable? Does the button invite a click? These little
+              decisions turn a plain page into a friendly experience.
+            </p>
+            <p>
+              For me, the most satisfying moment is when structure, design, and interactivity all
+              come together. That’s when a collection of files starts to feel like a real website.
+            </p>
+          </div>
+
+          <!-- Comment section for Post 2 -->
+          <section class="comments" aria-label="Comments for Finding Creativity in Code">
+            <h3>Comments</h3>
+
+            <form class="comment-form" data-post-id="post-2">
+              <div class="form-row">
+                <label for="comment-name-2">Name</label>
+                <input
+                  type="text"
+                  id="comment-name-2"
+                  name="name"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+              <div class="form-row">
+                <label for="comment-message-2">Comment</label>
+                <textarea
+                  id="comment-message-2"
+                  name="message"
+                  rows="3"
+                  placeholder="Share your thoughts..."
+                  required
+                ></textarea>
+              </div>
+              <button type="submit">Post Comment</button>
+            </form>
+
+            <ul class="comment-list" id="comments-post-2">
+              <!-- Comments for post 2 will appear here -->
+            </ul>
+          </section>
+        </article>
+
+        <!-- ============ BLOG POST 3 ============ -->
+        <article class="blog-post" id="post-3" data-tags="productivity learning consistency">
+          <header>
+            <h2>How I Stay Consistent While Learning</h2>
+            <p class="meta">
+              Published on
+              <time datetime="2025-11-10">10 November 2025</time>
+              · <span class="post-tags">Tags: Learning, Productivity</span>
+            </p>
+          </header>
+
+          <figure class="post-image">
+            <img
+              src="https://via.placeholder.com/900x400/111827/ffffff?text=Consistency+in+Learning"
+              alt="A calendar and checklist representing consistency and planning"
+            />
+          </figure>
+
+          <div class="post-content">
+            <p>
+              Learning web development can feel overwhelming. There are new tools, new concepts,
+              and constant updates. What helps me most is not speed, but consistency. Even 30
+              focused minutes a day can move me forward.
+            </p>
+            <p>
+              I like to split my time into three parts: reading or watching, practicing, and then
+              reflecting. This blog is actually part of that reflection step. Writing about what I
+              learned forces me to understand it clearly.
+            </p>
+            <p>
+              By building small projects like this blog, I’m training myself to finish what I
+              start. That habit is more valuable than memorizing every single method or keyword.
+            </p>
+          </div>
+
+          <!-- Comment section for Post 3 -->
+          <section class="comments" aria-label="Comments for How I Stay Consistent While Learning">
+            <h3>Comments</h3>
+
+            <form class="comment-form" data-post-id="post-3">
+              <div class="form-row">
+                <label for="comment-name-3">Name</label>
+                <input
+                  type="text"
+                  id="comment-name-3"
+                  name="name"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+              <div class="form-row">
+                <label for="comment-message-3">Comment</label>
+                <textarea
+                  id="comment-message-3"
+                  name="message"
+                  rows="3"
+                  placeholder="Share your thoughts..."
+                  required
+                ></textarea>
+              </div>
+              <button type="submit">Post Comment</button>
+            </form>
+
+            <ul class="comment-list" id="comments-post-3">
+              <!-- Comments for post 3 will appear here -->
+            </ul>
+          </section>
+        </article>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================ -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>&copy; <span id="year"></span> My Blog. Built with HTML, CSS &amp; JavaScript.</p>
+        <!-- Simple social links as optional feature -->
+        <div class="social-links">
+          <a href="#" aria-label="Share on Twitter">Twitter</a>
+          <a href="#" aria-label="Share on Instagram">Instagram</a>
+          <a href="#" aria-label="Share on LinkedIn">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Main script -->
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog - Welcome</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">My Blog</h1>
+            <p class="tagline">Sharing thoughts, ideas, and stories</p>
+        </div>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#post1" class="nav-link">Technology</a></li>
+                <li><a href="#post2" class="nav-link">Travel</a></li>
+                <li><a href="#post3" class="nav-link">Lifestyle</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <div class="container">
+            <input type="text" id="searchInput" placeholder="Search blog posts..." class="search-bar">
+            <button id="searchBtn" class="search-btn">Search</button>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Blog Post 1 -->
+            <article class="blog-post" id="post1" data-category="technology">
+                <div class="post-header">
+                    <h2 class="post-title">The Future of Artificial Intelligence</h2>
+                    <div class="post-meta">
+                        <span class="post-date">Published: October 15, 2024</span>
+                        <span class="post-category">Technology</span>
+                    </div>
+                </div>
+                <div class="post-image">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop" alt="AI Technology" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22400%22%3E%3Crect fill=%22%23ddd%22 width=%22800%22 height=%22400%22/%3E%3Ctext fill=%22%23999%22 font-family=%22sans-serif%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22%3EAI Technology%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="post-content">
+                    <p>Artificial Intelligence has revolutionized the way we interact with technology. From voice assistants to autonomous vehicles, AI is transforming every aspect of our daily lives. In this post, we explore the latest developments in AI and what the future holds.</p>
+                    <p>Machine learning algorithms are becoming more sophisticated, enabling computers to learn from data and make decisions with minimal human intervention. Deep learning, a subset of machine learning, uses neural networks to process information in ways that mimic the human brain.</p>
+                    <p>As we move forward, ethical considerations and responsible AI development will play a crucial role in shaping the future of this technology. It's essential to balance innovation with accountability.</p>
+                </div>
+                <div class="post-tags">
+                    <span class="tag">AI</span>
+                    <span class="tag">Machine Learning</span>
+                    <span class="tag">Technology</span>
+                </div>
+                
+                <!-- Comment Section for Post 1 -->
+                <div class="comments-section">
+                    <h3>Comments</h3>
+                    <div class="comment-form">
+                        <input type="text" id="name1" placeholder="Your Name" class="comment-input" required>
+                        <textarea id="message1" placeholder="Your Comment" class="comment-textarea" rows="4" required></textarea>
+                        <button onclick="addComment(1)" class="submit-btn">Post Comment</button>
+                    </div>
+                    <div id="comments1" class="comments-list"></div>
+                </div>
+            </article>
+
+            <!-- Blog Post 2 -->
+            <article class="blog-post" id="post2" data-category="travel">
+                <div class="post-header">
+                    <h2 class="post-title">Exploring Hidden Gems: A Traveler's Guide</h2>
+                    <div class="post-meta">
+                        <span class="post-date">Published: October 10, 2024</span>
+                        <span class="post-category">Travel</span>
+                    </div>
+                </div>
+                <div class="post-image">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=400&fit=crop" alt="Travel Destination" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22400%22%3E%3Crect fill=%22%23ddd%22 width=%22800%22 height=%22400%22/%3E%3Ctext fill=%22%23999%22 font-family=%22sans-serif%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22%3ETravel Destination%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="post-content">
+                    <p>Travel opens our minds and hearts to new experiences, cultures, and perspectives. In this guide, we'll explore some of the world's most beautiful hidden gems that are off the beaten path.</p>
+                    <p>From secluded beaches to mountain villages, these destinations offer authentic experiences away from tourist crowds. Each location has its unique charm and story to tell.</p>
+                    <p>Traveling responsibly means respecting local cultures, supporting local economies, and leaving places better than we found them. Sustainable tourism is the future of travel.</p>
+                </div>
+                <div class="post-tags">
+                    <span class="tag">Travel</span>
+                    <span class="tag">Adventure</span>
+                    <span class="tag">Culture</span>
+                </div>
+                
+                <!-- Comment Section for Post 2 -->
+                <div class="comments-section">
+                    <h3>Comments</h3>
+                    <div class="comment-form">
+                        <input type="text" id="name2" placeholder="Your Name" class="comment-input" required>
+                        <textarea id="message2" placeholder="Your Comment" class="comment-textarea" rows="4" required></textarea>
+                        <button onclick="addComment(2)" class="submit-btn">Post Comment</button>
+                    </div>
+                    <div id="comments2" class="comments-list"></div>
+                </div>
+            </article>
+
+            <!-- Blog Post 3 -->
+            <article class="blog-post" id="post3" data-category="lifestyle">
+                <div class="post-header">
+                    <h2 class="post-title">Finding Balance: Work-Life Harmony in 2024</h2>
+                    <div class="post-meta">
+                        <span class="post-date">Published: October 5, 2024</span>
+                        <span class="post-category">Lifestyle</span>
+                    </div>
+                </div>
+                <div class="post-image">
+                    <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=400&fit=crop" alt="Lifestyle Balance" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22400%22%3E%3Crect fill=%22%23ddd%22 width=%22800%22 height=%22400%22/%3E%3Ctext fill=%22%23999%22 font-family=%22sans-serif%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22%3ELifestyle Balance%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="post-content">
+                    <p>In today's fast-paced world, achieving a healthy work-life balance has become more important than ever. This post explores practical strategies for maintaining harmony between professional responsibilities and personal well-being.</p>
+                    <p>Setting boundaries, prioritizing self-care, and learning to say no are essential skills for modern professionals. It's not about perfect balance, but about creating a sustainable lifestyle that works for you.</p>
+                    <p>Remember, taking time for yourself isn't selfish—it's necessary. Whether it's through meditation, hobbies, or spending time with loved ones, finding what recharges you is key to long-term success and happiness.</p>
+                </div>
+                <div class="post-tags">
+                    <span class="tag">Lifestyle</span>
+                    <span class="tag">Wellness</span>
+                    <span class="tag">Productivity</span>
+                </div>
+                
+                <!-- Comment Section for Post 3 -->
+                <div class="comments-section">
+                    <h3>Comments</h3>
+                    <div class="comment-form">
+                        <input type="text" id="name3" placeholder="Your Name" class="comment-input" required>
+                        <textarea id="message3" placeholder="Your Comment" class="comment-textarea" rows="4" required></textarea>
+                        <button onclick="addComment(3)" class="submit-btn">Post Comment</button>
+                    </div>
+                    <div id="comments3" class="comments-list"></div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 My Blog. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" class="social-link" aria-label="Facebook">Facebook</a>
+                <a href="#" class="social-link" aria-label="Twitter">Twitter</a>
+                <a href="#" class="social-link" aria-label="Instagram">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
+
